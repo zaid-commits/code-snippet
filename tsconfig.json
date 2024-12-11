@@ -12,6 +12,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "jsx": "react-jsx", // or "react" if you are using an older version of React
+    "allowJs": true, // if you have JavaScript files in your project
+    "esModuleInterop": true, // to ensure compatibility with ES modules
+    "moduleResolution": "node" // to resolve modules in node_modules
   }
 }

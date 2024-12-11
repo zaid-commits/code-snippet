@@ -14,7 +14,7 @@ const CodeInput: React.FC<CodeInputProps> = ({ code, setCode, language, setLangu
         value={code}
         onChange={(e) => setCode(e.target.value)}
         placeholder="Paste your code here..."
-        className="w-full h-40 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="w-full h-60 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono"
       />
       <select
         value={language}
@@ -25,6 +25,8 @@ const CodeInput: React.FC<CodeInputProps> = ({ code, setCode, language, setLangu
         <option value="python">Python</option>
         <option value="java">Java</option>
         <option value="cpp">C++</option>
+        <option value="ruby">Ruby</option>
+        <option value="go">Go</option>
       </select>
     </div>
   );
