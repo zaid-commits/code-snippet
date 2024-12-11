@@ -3,10 +3,8 @@ import CodeInput from './components/CodeInput';
 import CardPreview from './components/CardPreview';
 import ExplanationPanel from './components/ExplanationPanel';
 import StyleCustomizer from './components/StyleCustomizer';
-import CodeVisualization from './components/CodeVisualization';
 import { generateExplanation, translateCode, summarizeCode, checkBestPractices } from './utils/api';
 import AIEnhancements from './components/AiEnhancements';
-import HelloWorld from './components/HelloWorld';
 
 const App: React.FC = () => {
   const [code, setCode] = useState('');
@@ -41,7 +39,6 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
-      <HelloWorld />
       <div className="relative py-3 sm:max-w-4xl sm:mx-auto">
         <div className={`absolute inset-0 ${gradient} shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl`}></div>
         <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
@@ -74,7 +71,7 @@ const App: React.FC = () => {
                 />
               </div>
             </div>
-            <CodeVisualization code={code} language={language} />
+            {/* <CodeVisualization code={code} language={language} /> */}
             <AIEnhancements
               onExplain={handleExplain}
               onTranslate={handleTranslate}
